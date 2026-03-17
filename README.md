@@ -2,6 +2,27 @@
 
 This directory contains the scripts for performing differential methylation analysis (DML/DMR) on EM-seq data. The pipeline integrates multiple tools (`MethylKit`, `BSmooth`, `DSS`, and `Metilene`) and provides annotation and visualization.
 
+## Input File Requirements
+
+The scripts expect **Bismark CpG coverage files** (`.cov.gz`) as input. These files should be sorted and indexed if necessary, though the scripts typically handle the `.cov.gz` format directly.
+
+### File Format (Tab-separated)
+1. `<chromosome>`: Genomic identifier.
+2. `<start position>`: 1-based start.
+3. `<end position>`: 1-based end.
+4. `<methylation percentage>`: (count methylated / total) * 100.
+5. `<count methylated>`: Number of methylated reads.
+6. `<count unmethylated>`: Number of unmethylated reads.
+
+### Example Data
+```text
+chr1    123456  123456  100     5       0
+chr1    123457  123457  0       0       3
+chr1    123480  123480  50      2       2
+```
+
+---
+
 ## Workflow Execution Order
 
 To run the complete analysis, follow this order:
