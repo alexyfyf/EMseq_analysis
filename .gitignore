@@ -1,0 +1,36 @@
+# Logs and temporary files
+logs/
+*.log
+Rplots.pdf
+
+# R specific
+.Rhistory
+.RData
+.Ruserdata
+*-history.R
+
+# Python specific
+__pycache__/
+*.py[cod]
+
+# Bioinformatics data files
+*.bam
+*.bai
+*.sam
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.vcf
+*.vcf.gz
+*.bed
+*.bw
+*.bigWig
+*.fasta
+*.fa
+*.fasta.gz
+*.fa.gz
+
+# System files
+.DS_Store
+Thumbs.db
